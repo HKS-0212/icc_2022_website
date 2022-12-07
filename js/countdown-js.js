@@ -1,6 +1,6 @@
 // set the date we're counting down to
 
-var target_date = new Date('Dec, 21, 2021').getTime();
+var target_date = new Date('Dec, 15, 2022').getTime();
 
  
 
@@ -29,8 +29,8 @@ setInterval(function () {
     var seconds_left = (target_date - current_date) / 1000;
 
     
-    //Time till 7pm
-    seconds_left = seconds_left + 68400;
+    //Time till EOD
+    seconds_left = seconds_left;
 
 
     // do some time calculations
@@ -55,9 +55,9 @@ setInterval(function () {
 
     // format countdown string + set tag value
 
-    countdown.innerHTML = '<span class="days">' + 0 +  ' <b>Days</b></span> <span class="hours">' + 0 + ' <b>Hours</b></span> <span class="minutes">'
+    countdown.innerHTML = '<span class="days">' + days +  ' <b>Days</b></span> <span class="hours">' + hours + ' <b>Hours</b></span> <span class="minutes">'
 
-    + 0 + ' <b>Minutes</b></span> <span class="seconds">' + 0 + ' <b>Seconds</b></span>';  
+    + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';  
 
  
 
