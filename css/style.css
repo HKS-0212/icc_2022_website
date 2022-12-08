@@ -1327,7 +1327,12 @@ h1{
 .timeline > li {
  margin-bottom: 20px;
  position: relative;
-	
+ transition: transform 1.5s;
+}
+.timeline > li:hover{
+	-ms-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
 }
 .timeline > li:before,
 .timeline > li:after {
@@ -1349,12 +1354,11 @@ h1{
 .timeline > li > .timeline-panel {
  width: 46%;
  float: left;
- border: 1px solid #dbdbdb;
+ border: 3px solid #1eb8d8;
  border-radius: 12px;
  padding: 20px;
  position: relative;
  background:#fff;
-
 }
 .timeline > li > .timeline-panel:before {
  position: absolute;
