@@ -15,6 +15,7 @@
 <!-- style -->
 
 <link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="head page.css">
 
 <!-- style -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,18 +97,134 @@
 	}
 }
 </style>
+<style>
+  /* *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  }    */
+  .m3{
+      width: 100%;
+      /* height: 100vh; */
+      display: flex;
+      /* flex-direction: column;
+      align-items: center; */
+      /* justify-content: center; */
+      /* background: #222; */
+      color: white;
+      flex-wrap: wrap;
+      align-content: space-between;
+      /* flex-direction: row; */
+      justify-content: space-evenly;
+      /* margin-bottom: 80%; */
+  }
+  
+  /* h2{
+      font-size: 30px;
+      margin: 15px;
+      font-weight: 600;
+      color: black;
+  } */
+  
+  .container_team{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+  }
+  
+  .container_team .card{
+      width: 260px;
+      margin: 10px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      transition: 0.3s;
+      color: white;
+  }
+  
+  .container_team .card:hover{
+      background: rgb(30, 184, 216);
+      color: white;
+  }
+  
+  .container_team .card .content{
+      transition: 0.3s;
+      color: white;
+  }
+  
+  .container_team .card .content:hover{
+      transform: scale(1.06);
+      color: white;
+  }
+  
+  .container_team .card .profile{
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 20px auto;
+      border: 5px solid black;
+      color: white;
+  }
+  
+  .container_team .card .profile img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      color: white;
+  }
+  
+  .container_team .card .detail h2,
+  .container_team .card .detail h4{
+      margin: 10px 0;
+      color: white;
+  }
+  
+  .container_team .card .social{
+      margin: 15px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: white;
+  }
+  
+  .container_team .card .detail .social a{
+      margin: 8px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      /* line-height: 40px; */
+      text-align: center;
+      transition: 0.2s;
+      color: white;
+      padding: 9px;
+  }
+  
+  .container_team .card .social a:hover{
+      background: #222;
+      color: white;
+  }
+  
+  .container_team .card .social a i{
+      font-size: 21px;
+      color: white;
+  }
+  </style>
 </head>
 
 <body>
-  <div class="modal fade" id="ctmodal" role="dialog">
+  <!-- <div class="modal fade" id="ctmodal" role="dialog">
     <div id="contactfade">  
-        <div class="modal-dialog zindexval">
-        
+        <div class="modal-dialog zindexval"> -->
+        <!--  -->
             <!-- Modal content-->
-          <div class="modal-content rounded=10 zindexval">
-            <div class="modal-header zindexval">
+          <!-- <div class="modal-content rounded=10 zindexval">
+            <div class="modal-header zindexval"> -->
                 <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                <h3 class="modal-title zindexval"><strong>Contact</strong></h3>
+                <!-- <h3 class="modal-title zindexval"><strong>Contact</strong></h3>
             </div>
             <div class="modal-body zindexval">
               <p>
@@ -127,15 +244,18 @@
                 <br><br>
 
                 </h4> 
-              </p>                  
+              </p>
+              <div>
+
+              </div>            
             </div>
             <div class="modal-footer zindexval">
               <div data-dismiss="modal" id="closing" class = "zindexval"><a href="#" onclick = "revert()"><strong>Close</strong></a></div>
             </div>
-          </div>            
-        </div>
+          </div>             -->
+        <!-- </div>
     </div>
-  </div>
+  </div> -->
 
   <!--MODAL-5-Content-->
 
@@ -599,7 +719,241 @@
         </div>
     </div>
   </div>
+  <div class="modal fade" id="p1" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Phone Number</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 65px !important;">
+              <p>
+                
+                <h4 class="modaltext" style="text-align: center;">
 
+                  +91 8114831955
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="p2" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Phone Number</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 65px !important;">
+              <p>
+                
+                <h4 class="modaltext" style="text-align: center;">
+
+                  +91 9408496819
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="p3" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Phone Number</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 65px !important;">
+              <p>
+                
+                <h4 class="modaltext" style="text-align: center;">
+
+                  +91 9122372154
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="p4" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Phone Number</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 65px !important;">
+              <p>
+                
+                <h4 class="modaltext" style="text-align: center;">
+
+                  +91 6281208280
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="p5" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Phone Number</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 65px !important;">
+              <p>
+                
+                <h4 class="modaltext" style="text-align: center;">
+
+                  +91 8907940000
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="p6" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Phone Number</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 65px !important;">
+              <p>
+                
+                <h4 class="modaltext" style="text-align: center;">
+
+                  +91 9353290780
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="p7" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Phone Number</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 65px !important;">
+              <p>
+                
+                <h4 class="modaltext" style="text-align: center;">
+
+                  +91 9380609519
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="p8" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Phone Number</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 65px !important;">
+              <p>
+                
+                <h4 class="modaltext" style="text-align: center;">
+                  +91 9301428383
+                
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="_check" role="dialog">
+    <div id="fadecontainer">  
+        <div class="modal-dialog">
+        
+            <!-- Modal content-->
+          <div class="modal-content rounded=10" style="width: 43%; margin: auto;">
+            <div class="modal-header" style="border-radius: 0px !important;">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h3 class="modal-title"><strong>Alert!!</strong></h3>
+            </div>
+            <div class="modal-body" style="height: 200px !important;">
+              <p>
+                
+                <h4 id="submit" class="modaltext" style="text-align: center;">
+
+               please check your mail
+                </h4> 
+              </p>                  
+            </div>
+            <div class="modal-footer" style="border-radius: 0px !important;">
+              <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
+            </div>
+          </div>            
+        </div>
+    </div>
+  </div>
 
 
   <!-- Modal2-->
@@ -765,15 +1119,23 @@
   <aside role="siderbar-nav" class="side-bar">
     <nav>
       <ul class="nav nav-tabs">
-        <li class="active" id="home1"><a data-toggle="tab" id="ahome" href="#home" title="Home" onclick="unhide()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-home"
+        <li class="active" id="home1">
+          <a data-toggle="tab" id="ahome" href="#home" title="Home" onclick="unhide()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-home"
               aria-hidden="true"></i><span class="slidetext">Home</span></a></li>
-        <li id="men1"><a data-toggle="tab" href="#menu1" id="aMenu1" title="About" onclick="unhide()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-info-circle" aria-hidden="true"></i><span
-              class="slidetext">About</span></a></li>
-        <li id="men2"><a data-toggle="tab" id="aMenu2" href="#menu2" title="Register" onclick="hiden()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-plus-square"
-              aria-hidden="true"></i><span class="slidetext">Register</span></a></li>
-
-              <li><a id="contact_btn"href="#" data-toggle="modal" data-target="#ctmodal" title="Contact"  onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-envelope" aria-hidden="true"></i><span
-                class="slidetext" >Contact</span></a></li>
+        <li id="men1">
+          <a data-toggle="tab" href="#menu1" id="aMenu1" title="About" onclick="unhide()" onmouseover="lowerz()" onmouseout="higherz()">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <span class="slidetext">About</span></a></li>
+        <li id="men2">
+          <a data-toggle="tab" id="aMenu2" href="#menu2" title="Register" onclick="hiden()" onmouseover="lowerz()" onmouseout="higherz()">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <span class="slidetext">Register</span></a></li>
+        <!-- <li id="men2">
+          <a data-toggle="tab" id="aMenu2" href="#menu2" title="Register" onclick="hiden()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-plus-square"
+                aria-hidden="true"></i><span class="slidetext">Register</span></a></li> -->
+                <!-- <li><a id="contact_btn"href="#" data-toggle="modal" data-target="#ctmodal" title="Contact"  onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-envelope" aria-hidden="true"></i><span class="slidetext" >Contact</span></a></li> -->
+              <li id="men3">
+                <a data-toggle="tab" id="aMenu3" href="#menu3" title="team" onclick="unhide()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-users" aria-hidden="true"></i><span class="slidetext" >Our Team</span></a></li>
   
   
            
@@ -812,7 +1174,7 @@
   <!-- main -->
   
   <main role="main" id="main">
-    <div class="container"> 
+    <div class="container" style="margin: auto;width: 90%;"> 
       
       <!-- tab-content -->
       
@@ -965,33 +1327,35 @@
         
         <section id="menu2" class="tab-pane fade other-page">
           <header id="regpagehead" role="page-title">
-             <h2 id="bclub" role="headregister" >Registrations are opening soon !</h2>
+             <h2 id="bclub" role="headregister" >Registrations are open</h2>
           </header>
           <article class="home-content regtext"><p id="registertext" >Registration for ICC 2023 will begin soon.<br>  
             <!-- to reviewing your submissions.  We appreciate all the hard work and<br> 
             effort that has gone into your submissions to help Round 1 of <br>
             ICC 2023 be a success.<br> -->
             <br> Stay tuned to our social media handles on <br><a id="reganchortags" href="https://www.linkedin.com/company/bclubiitkgp/">LinkedIn</a>, <a id="reganchortags" href="https://www.instagram.com/bclub.iitkgp/">Instagram</a> and <a id="reganchortags" href="https://www.facebook.com/bclubkgp">Facebook</a> for further updates.<br>
-          </p></article> 
-         <!-- <div id="submit"><h3><strong>Registration Successful !!</strong></h3></div>
+          </p>
+          <!-- <p id="wrappernew" style="border: none;"></p> -->
+        </article> 
+         <!-- <div id="submit"style="text-align: center;padding-top: 50px; padding-bottom: 50px;"><h3><strong>Registration Successful !!</strong></h3></div> -->
           
           <subscribe>
 
           <article>
-            <p>Give us your email so that you hear us first when we launch! It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-            
+            <!-- <p>Give us your email so that you hear us first when we launch! It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+             -->
             <div class="subscribe-pan">
               <div class="ntify_form">
-                <form method="post" action="php/subscribe.php" name="subscribeform" id="subscribeform">
-                  <input name="email" type="email" id="subemail" placeholder="Enter Your Email...">
-                  <label>
-                    <input name="" type="submit" class="button-icon">
-                    <i class="fa fa-paper-plane" aria-hidden="true"></i> </label>
+                <!-- <form method="post" action="php/subscribe.php" name="subscribeform" id="subscribeform"> -->
+                  <!-- <input name="email" type="email" id="subemail" placeholder="Enter Your Email..."> -->
+                  <!-- <label> -->
+                    <!-- <input name="" type="submit" class="button-icon"> -->
+                    <!-- <i class="fa fa-paper-plane" aria-hidden="true"></i> </label> -->
                 </form>
                 
-                < subscribe message -->
+                <!-- < subscribe message -->
                 
-                <!-- <div id="mesaj"></div> -->
+                <div id="mesaj"></div>
                 
                 <!-- subscribe message > 
                 
@@ -1000,7 +1364,8 @@
             
             <subscribe --> 
 
-
+            </div>
+          </div>
 
 
 
@@ -1008,14 +1373,14 @@
             <!-- <iframe name="hidden_iframe" style="display: none;"></iframe> -->
 
 
-            <!-- <iframe name="hidden_iframe" style="display: none;"></iframe>
+            <!-- <iframe name="hidden_iframe" style="display: none;"></iframe>  -->
 
-            <form class="row g-3" id="regform" name="regform" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeAQiGxNcGZq0lIQNMLVk1crTmODlqd-2dYwypdBV98TDkDQ/formResponse" target="hidden_iframe">
+            <!-- <form class="row g-3" id="regform" name="regform" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeAQiGxNcGZq0lIQNMLVk1crTmODlqd-2dYwypdBV98TDkDQ/formResponse" target="hidden_iframe"> -->
 
-              <div class="row">
+              <!-- <div class="row"> -->
 
               
-              <div class="col-md-12">
+              <!-- <div class="col-md-12">
                 <label for="teamname" class="form-label" id="reglabelhead"><sup>*</sup>Team Name</label>
                 <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.495363380" placeholder="Enter Your Team Name" required>
               </div> -->
@@ -1235,16 +1600,16 @@
                   </div>
                 </div>
               </div>
-              <br><br><br>
+              <br><br><br> -->
 
 
-              <div class="row">
+              <!-- <div class="row">
 
               
                 <div class="col-md-12">
-                    <label for="ques1" class="form-label" id="formheading"><sup>*</sup>How did you hear about us ?</label>
-                    <input type="text" class="form-control1 inputfields" id="ques1"  name="entry.1317580365" placeholder="..." required>
-                  -->
+                    <label for="ques1" class="form-label" id="formheading"><sup>*</sup>How did you hear about us ?</label> -->
+                    <!-- <input type="text" class="form-control1 inputfields" id="ques1"  name="entry.1317580365" placeholder="..." required> -->
+                 
                   
                     <br>
 
@@ -1259,16 +1624,16 @@
                     <option value="WhatsApp">WhatsApp</option>
                     <option value="Instagram">Instagram</option>
                     <option value="Other">Other</option>
-                    </select> -->
+                    </select>  -->
                    
 
-                <!-- </div>
+                <!-- </div> -->
                 
   
               
-                <input type="text" class="quantumWizTextinputSimpleinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Short-answer text" disabled="" dir="auto" data-initial-dir="auto" data-initial-value=""> -->
+                <!-- <input type="text" class="quantumWizTextinputSimpleinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Short-answer text" disabled="" dir="auto" data-initial-dir="auto" data-initial-value=""> -->
   
-                <!-- </div> --> 
+                <!-- </div>  -->
 
 
               
@@ -1276,13 +1641,17 @@
               <!-- 1317580365 -->
 
               <!-- <br><br><br><br>
-              <div class="col-2">
+              <div data-toggle="modal" data-target="#_check" style="margin-top: 18px;">
+                <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button> -->
+              <!-- </div> -->
+                  <!-- <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button> -->
+              <!-- <div class="col-2">
                   <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button>
                 </div>  -->
-                
+                <p id="wrappernew" style="border: none;"></p>                
 
                 <script src="js/regformsubmit.js">
-                  /*
+                  
                     function submitForm() {
                     document.regform.submit();
                     document.regform.reset();
@@ -1293,7 +1662,7 @@
 
                     }
 
-                  */
+                  
 
                     
 
@@ -1329,49 +1698,559 @@
 
             
           </article>
-          <p id="wrappernew"></p>
         </section>
         
         <!-- Newsletter Subscribtion --> 
         
         <!-- Contact -->
-        
         <section id="menu3" class="tab-pane fade other-page">
-          <header role="page-title">
-            <h2>Contact us</h2>
-          </header>
-          <article>
-            <p>Mauris rutrum risus ac luctus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent vel quam id mi finibus tempor. </p>
-          </article>
-          
-
-          <!-- form -->
-          
-          <div class="contact-from row">
-            <div class="col-md-7 col-lg-7">
-              <div id="message"></div>
-              <form method="post" action="php/contact.php" name="cform" id="cform">
-                <div class="row">
-                  <div class="col-md-6 col-lg-6 col-sm-6">
-                    <input  name="name" id="name" type="text" placeholder="Enter Your Name...">
+          <!-- <header role="page-title" style="padding-bottom:20px;">
+              <h2 id="bclub" role="headabout">Our Team</h2>
+            </header>-->
+            <div class="m3">
+              <h2 style="color: #1eb8d8; font-size: 40px;"><strong>Executive Team</strong></h2>
+      <div class="container_team">
+      
+      <div class="card ">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1621407617166.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Pragya Choudhary</h2>
+                  <h4 style="font-size: 15px ;">Head Strategy</h4>
+                  <div class="social">
+                      <a href="mailto:pragyadaisy@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p1" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/pragya-choudhary-104964200/"><i class="fa fa-linkedin-square"></i></a>
                   </div>
-                  <div class="col-md-6 col-lg-6 col-sm-6">
-                    <input  name="email" id="email" type="email"  placeholder="Enter Your Email...">
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <textarea name="comments" id="comments" cols="" rows="" placeholder="Enter Your Description..."></textarea>
-                <div class="clearfix"></div>
-                <input name="" type="submit" value="Submit">
-                <div id="simple-msg"></div>
-              </form>
-            </div>
-            <div class="clearfix"></div>
+              </div>
           </div>
+      </div>
+      
+      <div class="card">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1652466320933.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Yuti Patel</h2>
+                  <h4 style="font-size: 15px ;">Head Finance</h4>
+                  <div class="social">
+                      <a href="mailto:yuti13112020@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p2" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/yuti-patel-85060b218/"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1664528233844.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Madiha Hanifa</h2>
+                  <h4 style="font-size: 15px ;">Governor</h4>
+                  <div class="social">
+                      <a href="mailto:madihahanifa91@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p3" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/madiha-hanifa/"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1666245365699.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Sai Kalyan Meghavath</h2>
+                  <h4 style="font-size: 15px ;">Web and Design Head</h4>
+                  <div class="social">
+                      <a href="mailto:saikalyan2002@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p4" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/sai-kalyan-meghavath-7a26551ba/"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1667340787631.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Bharat Uday</h2>
+                  <h4 style="font-size: 15px ;">Governor</h4>
+                  <div class="social">
+                      <a href="mailto:yoursbharatuday@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p5" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/bharat-uday-a05018196/"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1668207214995.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Ram Sundaram</h2>
+                  <h4 style="font-size: 15px ;">Head Finance</h4>
+                  <div class="social">
+                      <a href="mailto:ram.sundaram101@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p6" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/ram-s/"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1627956930551.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Siddharth Madupathi</h2>
+                  <h4 style="font-size: 15px ;">Head Strategy</h4>
+                  <div class="social">
+                      <a href="mailto:siddharthmadupathi@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p7" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/siddharth-madupathi-07532920a/"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+        <div class="content">
+            <div class="profile">
+                <img src="images/Head photo/1661185252348.jpeg" alt="">
+            </div>
+            <div class="detail">
+                <h2 style=" font-size: 25px">Vaibhav Jalani</h2>
+                <h4 style="font-size: 15px ;">Head Analytics</h4>
+                <div class="social">
+                    <a href="mailto:jalani.vaibhav@gmail.com"><i class="fa fa-envelope"></i></a>
+                    <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                    <div data-toggle="modal" data-target="#p8" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                    <a href="https://www.linkedin.com/in/vaibhavjalani/"><i class="fa fa-linkedin-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div>
+      <div class="indicator" id="arrowdown3">
+        <a href="#wrappernew2" onclick="arrowclick()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        </div>
+        <br><br><br><br>
+    </div>
+    </div>
+       -->
+      <!-- </div> -->
+
+      <div class="m3" style="width: 80%;">
+
+        <h2 style="color: #1eb8d8; font-size: 40px;"><strong>Our Advisor</strong></h2>
+<div class="container_team">
+
+<div class="card ">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1595913532412.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Arya Uttamchandani</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:uttamchandaniarya0@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/arya-uttamchandani-696a371b3/?originalSubdomain=in"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1655637528021.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Sankalp Bose            </h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:sankalp9987@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/sankalp9987/"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1581161169645.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px"> Karan Uppal</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:karan.uppal3@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/karan-uppal3/"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1643478538748.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Dikshant Pratap Singh</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:dikshant293@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/dikshantpratapsingh/"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1602257235435.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Arnav Bhutda</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:bhutdaarnav@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/arnav-bhutda/"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1666065318821.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style="font-size: 25px;">Suhas Jain</h2>
+            <h4 style="font-size: 15px;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:suhasjain142@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/suhas-jain/"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1629548586172.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Aditya Saha</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:adityaranjha786@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/aditya-saha-67b6941a9/"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1604513540745.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Tejaswi Pagadala</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:tejaswi24pagadala@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/tejaswi-24-pagadala/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1668086180247.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Piyush Dhamane</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:piyush.dhamne@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/piyush-dhamane-12286a194/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1606316081578.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Kasis Lundia</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:kasis.lundia1@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/kasis-lundia/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1581425724005.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Deepansh Agrawal</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:dp24.agl@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <div data-toggle="modal" data-target="#p1"> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <!-- </div> -->
+              <!-- <a><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/deepansh24/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1655413089352.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Aryan Saxena</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:aryansaxena0308@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <div data-toggle="modal" data-target="#p1"> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <!-- </div> -->
+              <!-- <a><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/aryan-saxena-516593184/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1572600742622.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Shivam</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:shivamrnc2000@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <div data-toggle="modal" data-target="#p1"> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <!-- </div> -->
+              <!-- <a><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/shivam-701496196/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1579719839537.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Sayantan Das</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:emailtosayantan@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <div data-toggle="modal" data-target="#p1"> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <!-- </div> -->
+              <!-- <a><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/sayantan-das-sd/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1625350522379.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Abhinav Bohra</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:abhinavbohra01@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <div data-toggle="modal" data-target="#p1"> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <!-- </div> -->
+              <!-- <a><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/abhinav-bohra/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1651217953179.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Arusarka Bose</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:arusarkabose@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <div data-toggle="modal" data-target="#p1"> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <!-- </div> -->
+              <!-- <a><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/arusarka-bose/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1649654836734.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Lakshiyata Chhajer</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:lakshita14102000@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <div data-toggle="modal" data-target="#p1"> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <!-- </div> -->
+              <!-- <a><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/lakshiyata-chhajer-92342219b/"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- <div id="p1" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="w3-button w3-display-topright">&times;</span>
+      <p>Some text in the Modal..</p>
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+</div> -->
+<div>
+<!-- <div class="indicator" id="arrowdown3">
+  <a href="#wrappernew2" onclick="arrowclick()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  </div>
+  <br><br><br><br>
+</div> -->
+</div>
+
+</div>
+      
+  <div style="margin-bottom: 150px;">
+    &nbsp;&nbsp;
+  </div>
+  <!-- <div class="indicator" id="arrowdown3">
+    <a href="#wrappernew2" onclick="arrowclick()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    </div>
+    <br><br><br><br> -->
+  <!-- <p id="wrappernew2" style="margin-bottom: 200px;"></p> -->
+    <!-- <div class="indicator" id="arrowdown2">
+      <a href="#wrappernew2" onclick="arrowclick()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      </div>
+      <br><br><br><br> -->
+      <!-- <p id="wrappernew2"></p> -->
           
           <!-- form --> 
           
-        </section>
+  </section>
         
         <!-- Contact --> 
         
