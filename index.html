@@ -213,9 +213,110 @@
       color: white;
   }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+      function postToGoogle() {
+          var field1 = $("#teamname").val();
+        var field11 = $("#firstname1").val();
+        var field21 = $("#email1").val();
+        var field31 = $("#phone1").val();
+        var field41 = $("#college1").val();
+        var field12 = $("#firstname2").val();
+        var field22 = $("#email2").val();
+        var field32 = $("#phone2").val();
+        var field42 = $("#college2").val();
+        var field13 = $("#firstname3").val();
+        var field23 = $("#email3").val();
+        var field33 = $("#phone3").val();
+        var field43 = $("#college3").val();
+        var field14 = $("#firstname4").val();
+        var field24 = $("#email4").val();
+        var field34 = $("#phone4").val();
+        var field44 = $("#college4").val();
+        var field15 = $("#firstname5").val();
+        var field25 = $("#email5").val();
+        var field35 = $("#phone5").val();
+        var field45 = $("#college5").val();
+        var field5 = $("#ques1").val();
+  
+        $.ajax({
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSdWQGRiV_EYLim5vXDbs68tthX9j1BjdOLs9925llApT-zqwQ/formResponse",
+            
+          //add your google form generated numbers below which are also the 'names' of your inputs     
+          data: {
+              "entry.15086253": field1,
+            "entry.401518065": field11,
+            "entry.1330396034": field21,
+            "entry.77538934": field31,
+            "entry.630086000": field41,
+            "entry.915022085": field12,
+            "entry.1593807239": field22,
+            "entry.2039440404": field32,
+            "entry.1712801718": field42,
+            "entry.372156207": field13,
+            "entry.435500274": field23,
+            "entry.415626765": field33,
+            "entry.1581386923": field43,
+            "entry.1129919067": field14,
+            "entry.1488498643": field24,
+            "entry.2065724223": field34,
+            "entry.233946190": field44,
+            "entry.967190264": field15,
+            "entry.103853115": field25,
+            "entry.1526357233": field35,
+            "entry.486475059": field45,
+            "entry.1524226097": field5,
+          },
+          type: "POST",
+          dataType: "xml",
+          success: function (d) {
+            $('#regform').trigger('reset');
+          },
+          error: function (x, y, z) {
+            $('#regform').trigger('reset');
+          }
+        });
+        return false;
+      }
+    </script>
+    <style>
+#loader{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #21242d url(images/loading.gif) no-repeat center;
+	z-index: 999;
+  background-size: cover;
+}
+    </style>
+    <script>
+      var loader;
+
+function loadNow(opacity) {
+    if (opacity <= 0) {
+        displayContent();
+    } else {
+        loader.style.opacity = opacity;
+        window.setTimeout(function() {
+            loadNow(opacity - 0.05);
+        }, 50);
+    }
+}
+
+function displayContent() {
+    loader.style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loader = document.getElementById('loader');
+    loadNow(4);
+});
+    </script>
 </head>
 
 <body>
+  <div id="loader"></div>
   <!-- <div class="modal fade" id="ctmodal" role="dialog">
     <div id="contactfade">  
         <div class="modal-dialog zindexval"> -->
@@ -448,9 +549,9 @@
                   <li data-target="#carousel-example-generic" data-slide-to="23"></li>
                   <li data-target="#carousel-example-generic" data-slide-to="24"></li>
                   <li data-target="#carousel-example-generic" data-slide-to="25"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="26"></li>
+                  <!-- <li data-target="#carousel-example-generic" data-slide-to="26"></li>
                   <li data-target="#carousel-example-generic" data-slide-to="27"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="28"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="28"></li> -->
                 </ol>
               
                 <!-- Wrapper for slides -->
@@ -611,24 +712,24 @@
                       <!-- Img - 26 -->
                     </div>
                   </div>
-                  <div class="item">
-                    <img src="images/gallery/Screenshot 2022-12-06 202942.jpg" alt="...">
-                    <div class="carousel-caption">
+                  <!-- <div class="item"> -->
+                    <!-- <img src="images/gallery/Screenshot 2022-12-06 202942.jpg" alt="..."> -->
+                    <!-- <div class="carousel-caption"> -->
                       <!-- Img - 27 -->
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="images/gallery/Screenshot 2022-12-06 203127.jpg" alt="...">
-                    <div class="carousel-caption">
+                    <!-- </div> -->
+                  <!-- </div> -->
+                  <!-- <div class="item"> -->
+                    <!-- <img src="images/gallery/Screenshot 2022-12-06 203127.jpg" alt="..."> -->
+                    <!-- <div class="carousel-caption"> -->
                       <!-- Img - 28 -->
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="images/gallery/Screenshot 2022-12-06 205138.jpg" alt="...">
-                    <div class="carousel-caption">
+                    <!-- </div> -->
+                  <!-- </div> -->
+                  <!-- <div class="item"> -->
+                    <!-- <img src="images/accordion_arrow.png" alt="..."> -->
+                    <!-- <div class="carousel-caption"> -->
                       <!-- Img - 29 -->
-                    </div>
-                  </div>
+                    <!-- </div> -->
+                  <!-- </div> -->
                 </div>
               
                 <!-- Controls -->
@@ -938,14 +1039,8 @@
                 <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                 <h3 class="modal-title"><strong>Alert!!</strong></h3>
             </div>
-            <div class="modal-body" style="height: 200px !important;">
-              <p>
-                
-                <h4 id="submit" class="modaltext" style="text-align: center;">
-
-               please check your mail
-                </h4> 
-              </p>                  
+            <div id="submit" class="modal-body" style="height: 200px !important;">
+               please check your mail                 
             </div>
             <div class="modal-footer" style="border-radius: 0px !important;">
               <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
@@ -1329,11 +1424,11 @@
           <header id="regpagehead" role="page-title">
              <h2 id="bclub" role="headregister" >Registrations are open</h2>
           </header>
-          <article class="home-content regtext"><p id="registertext" >Registration for ICC 2023 will begin soon.<br>  
+          <article class="home-content regtext"><p id="registertext" >Required field are marked with an asterisk (*)<br>  
             <!-- to reviewing your submissions.  We appreciate all the hard work and<br> 
             effort that has gone into your submissions to help Round 1 of <br>
             ICC 2023 be a success.<br> -->
-            <br> Stay tuned to our social media handles on <br><a id="reganchortags" href="https://www.linkedin.com/company/bclubiitkgp/">LinkedIn</a>, <a id="reganchortags" href="https://www.instagram.com/bclub.iitkgp/">Instagram</a> and <a id="reganchortags" href="https://www.facebook.com/bclubkgp">Facebook</a> for further updates.<br>
+            <!-- <br> Stay tuned to our social media handles on <br><a id="reganchortags" href="https://www.linkedin.com/company/bclubiitkgp/">LinkedIn</a>, <a id="reganchortags" href="https://www.instagram.com/bclub.iitkgp/">Instagram</a> and <a id="reganchortags" href="https://www.facebook.com/bclubkgp">Facebook</a> for further updates.<br> -->
           </p>
           <!-- <p id="wrappernew" style="border: none;"></p> -->
         </article> 
@@ -1370,25 +1465,25 @@
 
 
             <!--REG FORM-->
-            <!-- <iframe name="hidden_iframe" style="display: none;"></iframe> -->
+            <iframe name="hidden_iframe" style="display: none;"></iframe>
 
 
-            <!-- <iframe name="hidden_iframe" style="display: none;"></iframe>  -->
+            <iframe name="hidden_iframe" style="display: none;"></iframe> 
 
-            <!-- <form class="row g-3" id="regform" name="regform" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeAQiGxNcGZq0lIQNMLVk1crTmODlqd-2dYwypdBV98TDkDQ/formResponse" target="hidden_iframe"> -->
+            <form class="row g-3" id="regform" name="rform" onsubmit="return postToGoogle();" target="hidden_iframe">
 
-              <!-- <div class="row"> -->
+              <div class="row">
 
               
-              <!-- <div class="col-md-12">
+              <div class="col-md-12">
                 <label for="teamname" class="form-label" id="reglabelhead"><sup>*</sup>Team Name</label>
-                <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.495363380" placeholder="Enter Your Team Name" required>
-              </div> -->
+                <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.15086253" placeholder="Enter Your Team Name" required>
+              </div>
 
             
               <!-- <input type="text" class="quantumWizTextinputSimpleinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Short-answer text" disabled="" dir="auto" data-initial-dir="auto" data-initial-value=""> -->
 
-              <!-- </div>
+            </div>
             
             
              <br><br><br>
@@ -1399,13 +1494,13 @@
 
               <div class="col-md-6">
                   <label for="firstname" class="form-label"  id="reglabel"><sup>*</sup>Name</label>
-                  <input type="text" class="form-control1  inputfields" id="firstname1" name="entry.1303610314" placeholder="Enter Your Name" required>
+                  <input type="text" class="form-control1  inputfields" id="firstname1" name="entry.401518065" placeholder="Enter Your Name" required>
               </div>
             
 
               <div class="col-md-6">
                   <label for="email" class="form-label"  id="reglabel"><sup>*</sup>Email id:</label>
-                  <input type="text" class="form-control1  inputfields" id="email1" name="entry.1758843105" placeholder="abc@xyz.com" required>
+                  <input type="text" class="form-control1  inputfields" id="email1" name="entry.1330396034 " placeholder="abc@xyz.com" required>
               </div>
 
               </div>
@@ -1416,12 +1511,12 @@
 
               <div class="col-md-6">
                   <label for="phone" class="form-label"  id="reglabel"><sup>*</sup>Phone Number</label>
-                  <input type="text" class="form-control1  inputfields" id="phone1" name="entry.1899735185" placeholder="+91" required>
+                  <input type="text" class="form-control1  inputfields" id="phone1" name="entry.77538934 " placeholder="+91" required>
               </div>
 
               <div class="col-md-6">
                   <label for="college" class="form-label"  id="reglabel"><sup>*</sup>College</label>
-                  <input type="text" class="form-control1  inputfields" id="college1" name="entry.1349643478" placeholder="College Name" required>
+                  <input type="text" class="form-control1  inputfields" id="college1" name="entry.630086000" placeholder="College Name" required>
               </div>
               
               </div>
@@ -1440,13 +1535,13 @@
 
                       <div class="col-md-6">
                           <label for="firstname" class="form-label"  id="reglabel"><sup>*</sup>Name</label>
-                          <input type="text" class="form-control1  inputfields" id="firstname2" name="entry.385183756" placeholder="Enter Your Name">
+                          <input type="text" class="form-control1  inputfields" id="firstname2" name="entry.915022085" placeholder="Enter Your Name" required>
                       </div>
                     
         
                       <div class="col-md-6">
                           <label for="email" class="form-label"  id="reglabel"><sup>*</sup>Email id:</label>
-                          <input type="text" class="form-control1  inputfields" id="email2" name="entry.1181759387" placeholder="abc@xyz.com">
+                          <input type="text" class="form-control1  inputfields" id="email2" name="entry.1593807239" placeholder="abc@xyz.com" required>
                       </div>
         
                       </div>
@@ -1457,12 +1552,12 @@
         
                       <div class="col-md-6">
                           <label for="phone" class="form-label"  id="reglabel"><sup>*</sup>Phone Number</label>
-                          <input type="text" class="form-control1  inputfields" id="phone2" name="entry.1757612186" placeholder="+91">
+                          <input type="text" class="form-control1  inputfields" id="phone2" name="entry.2039440404" placeholder="+91" required>
                       </div>
         
                       <div class="col-md-6">
                           <label for="college" class="form-label"  id="reglabel"><sup>*</sup>College</label>
-                          <input type="text" class="form-control1  inputfields" id="college2" name="entry.324302188" placeholder="College Name">
+                          <input type="text" class="form-control1  inputfields" id="college2" name="entry.1712801718" placeholder="College Name" required>
                       </div>
                       
                     </div>
@@ -1488,13 +1583,13 @@
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname" name="entry.1761997611" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname3" name="entry.372156207" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email" name="entry.2000455384" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email3" name="entry.435500274" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1505,12 +1600,12 @@
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone" name="entry.891589539" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone3" name="entry.415626765" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college" name="entry.1562631995" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college3" name="entry.1581386923" placeholder="College Name">
                         </div>
                         
                         </div>
@@ -1529,13 +1624,13 @@
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname" name="entry.1263317225" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname4" name="entry.1129919067" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email" name="entry.2092376359" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email4" name="entry.1488498643" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1546,12 +1641,12 @@
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone" name="entry.379966044" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone4" name="entry.2065724223" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college" name="entry.1050136750" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college4" name="entry.233946190" placeholder="College Name">
                         </div>
                         
                         </div>
@@ -1570,13 +1665,13 @@
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname" name="entry.2042001891" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname5" name="entry.967190264" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email" name="entry.109623924" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email5" name="entry.103853115" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1587,12 +1682,12 @@
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone" name="entry.2058608921" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone5" name="entry.1526357233" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college" name="entry.1071033801" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college5" name="entry.486475059" placeholder="College Name">
                         </div>
                         
                         </div>
@@ -1600,14 +1695,14 @@
                   </div>
                 </div>
               </div>
-              <br><br><br> -->
+              <br><br><br>
 
 
-              <!-- <div class="row">
+              <div class="row">
 
               
                 <div class="col-md-12">
-                    <label for="ques1" class="form-label" id="formheading"><sup>*</sup>How did you hear about us ?</label> -->
+                    <label for="ques1" class="form-label" id="formheading"><sup>*</sup>How did you hear about us ?</label>
                     <!-- <input type="text" class="form-control1 inputfields" id="ques1"  name="entry.1317580365" placeholder="..." required> -->
                  
                   
@@ -1615,7 +1710,7 @@
 
                   
                   
-                    <!-- <select id="ques1" name="entry.1317580365" class="form-select" required>
+                    <select id="ques1" name="entry.1524226097" class="form-select" required>
                     <option value="College">College</option>
                     <option value="LinkedIn">LinkedIn</option>
                     <option value="Friends">Friends</option>
@@ -1624,7 +1719,7 @@
                     <option value="WhatsApp">WhatsApp</option>
                     <option value="Instagram">Instagram</option>
                     <option value="Other">Other</option>
-                    </select>  -->
+                    </select> 
                    
 
                 <!-- </div> -->
@@ -1640,27 +1735,27 @@
 
               <!-- 1317580365 -->
 
-              <!-- <br><br><br><br>
+              <br><br><br><br>
               <div data-toggle="modal" data-target="#_check" style="margin-top: 18px;">
-                <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button> -->
-              <!-- </div> -->
+                <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button>
+              </div>
                   <!-- <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button> -->
               <!-- <div class="col-2">
                   <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button>
                 </div>  -->
-                <p id="wrappernew" style="border: none;"></p>                
+                <!-- <p id="wrappernew" style="border: none;"></p>                 -->
 
                 <script src="js/regformsubmit.js">
                   
-                    function submitForm() {
-                    document.regform.submit();
-                    document.regform.reset();
+                    // function submitForm() {
+                    // document.regform.submit();
+                    // document.regform.reset();
 
-                    var mysubmit = document.getElementById('submit');
-                    var displaySetting = submit.style.display;
-                    mysubmit.style.display = 'block';
+                    // var mysubmit = document.getElementById('submit');
+                    // // var displaySetting = submit.style.display;
+                    // // mysubmit.style.display = 'block';
 
-                    }
+                    // }
 
                   
 
@@ -1972,7 +2067,7 @@
   <div class="card">
     <div class="content">
         <div class="profile">
-            <img src="images/Advisor photo/1579719839537.jpeg" alt="">
+            <img src="images/Advisor photo/WhatsApp Image 2022-12-10 at 23.21.13.jpg" alt="">
         </div>
         <div class="detail">
             <h2 style=" font-size: 25px">Sayantan Das</h2>
