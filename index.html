@@ -244,7 +244,7 @@
             
           //add your google form generated numbers below which are also the 'names' of your inputs     
           data: {
-              "entry.15086253 ": field1,
+              "entry.15086253": field1,
             "entry.401518065": field11,
             "entry.1330396034": field21,
             "entry.77538934": field31,
@@ -270,10 +270,10 @@
           type: "POST",
           dataType: "xml",
           success: function (d) {
-            $('#regform').trigger('reset');
+            $('#regform1').trigger('reset');
           },
           error: function (x, y, z) {
-            $('#regform').trigger('reset');
+            $('#regform1').trigger('reset');
           }
         });
         return false;
@@ -1399,7 +1399,7 @@
             <!-- to reviewing your submissions.  We appreciate all the hard work and<br> 
             effort that has gone into your submissions to help Round 1 of <br>
             ICC 2023 be a success.<br> -->
-            <br> Stay tuned to our social media handles on <br><a id="reganchortags" href="https://www.linkedin.com/company/bclubiitkgp/">LinkedIn</a>, <a id="reganchortags" href="https://www.instagram.com/bclub.iitkgp/">Instagram</a> and <a id="reganchortags" href="https://www.facebook.com/bclubkgp">Facebook</a> for further updates.<br>
+            <!-- <br> Stay tuned to our social media handles on <br><a id="reganchortags" href="https://www.linkedin.com/company/bclubiitkgp/">LinkedIn</a>, <a id="reganchortags" href="https://www.instagram.com/bclub.iitkgp/">Instagram</a> and <a id="reganchortags" href="https://www.facebook.com/bclubkgp">Facebook</a> for further updates.<br> -->
           </p>
           <!-- <p id="wrappernew" style="border: none;"></p> -->
         </article> 
@@ -1441,7 +1441,7 @@
 
             <iframe name="hidden_iframe" style="display: none;"></iframe> 
 
-            <form class="row g-3" id="regform" name="regform" onsubmit="return postToGoogle();" target="hidden_iframe">
+            <form class="row g-3" id="regform1" name="regform" onsubmit="return postToGoogle();" target="hidden_iframe">
 
               <div class="row">
 
