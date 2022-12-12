@@ -213,6 +213,72 @@
       color: white;
   }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+      function postToGoogle() {
+          var field1 = $("#teamname").val();
+        var field11 = $("#firstname1").val();
+        var field21 = $("#email1").val();
+        var field31 = $("#phone1").val();
+        var field41 = $("#college1").val();
+        var field12 = $("#firstname2").val();
+        var field22 = $("#email2").val();
+        var field32 = $("#phone2").val();
+        var field42 = $("#college2").val();
+        var field13 = $("#firstname3").val();
+        var field23 = $("#email3").val();
+        var field33 = $("#phone3").val();
+        var field43 = $("#college3").val();
+        var field14 = $("#firstname4").val();
+        var field24 = $("#email4").val();
+        var field34 = $("#phone4").val();
+        var field44 = $("#college4").val();
+        var field15 = $("#firstname5").val();
+        var field25 = $("#email5").val();
+        var field35 = $("#phone5").val();
+        var field45 = $("#college5").val();
+        var field5 = $("#ques1").val();
+  
+        $.ajax({
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSd231AsqS8YzD8DT20mjFa0pWaX_TZQQy-G_WKL9HfI4yLy1g/formResponse",
+            
+          //add your google form generated numbers below which are also the 'names' of your inputs     
+          data: {
+              "entry.1918365889": field1,
+            "entry.1324486624": field11,
+            "entry.1330396034": field21,
+            "entry.77538934": field31,
+            "entry.630086000": field41,
+            "entry.915022085": field12,
+            "entry.1593807239": field22,
+            "entry.2039440404": field32,
+            "entry.1712801718": field42,
+            "entry.372156207": field13,
+            "entry.435500274": field23,
+            "entry.415626765": field33,
+            "entry.1581386923": field43,
+            "entry.1129919067": field14,
+            "entry.1488498643": field24,
+            "entry.2065724223": field34,
+            "entry.233946190": field44,
+            "entry.967190264": field15,
+            "entry.103853115": field25,
+            "entry.1526357233": field35,
+            "entry.486475059": field45,
+            "entry.1524226097": field5,
+          },
+          type: "POST",
+          dataType: "xml",
+          success: function (d) {
+            $('#contact').trigger('reset');
+          },
+          error: function (x, y, z) {
+            $('#contact').trigger('reset');
+          }
+        });
+        return false;
+      }
+    </script>
 </head>
 
 <body>
@@ -1370,25 +1436,25 @@
 
 
             <!--REG FORM-->
-            <!-- <iframe name="hidden_iframe" style="display: none;"></iframe> -->
+            <iframe name="hidden_iframe" style="display: none;"></iframe>
 
 
-            <!-- <iframe name="hidden_iframe" style="display: none;"></iframe>  -->
+            <iframe name="hidden_iframe" style="display: none;"></iframe> 
 
-            <!-- <form class="row g-3" id="regform" name="regform" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeeAQiGxNcGZq0lIQNMLVk1crTmODlqd-2dYwypdBV98TDkDQ/formResponse" target="hidden_iframe"> -->
+            <form class="row g-3" id="regform" name="regform" onsubmit="return postToGoogle();" target="hidden_iframe">
 
-              <!-- <div class="row"> -->
+              <div class="row">
 
               
-              <!-- <div class="col-md-12">
+              <div class="col-md-12">
                 <label for="teamname" class="form-label" id="reglabelhead"><sup>*</sup>Team Name</label>
-                <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.495363380" placeholder="Enter Your Team Name" required>
-              </div> -->
+                <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.1918365889" placeholder="Enter Your Team Name" required>
+              </div>
 
             
               <!-- <input type="text" class="quantumWizTextinputSimpleinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Short-answer text" disabled="" dir="auto" data-initial-dir="auto" data-initial-value=""> -->
 
-              <!-- </div>
+            </div>
             
             
              <br><br><br>
@@ -1399,13 +1465,13 @@
 
               <div class="col-md-6">
                   <label for="firstname" class="form-label"  id="reglabel"><sup>*</sup>Name</label>
-                  <input type="text" class="form-control1  inputfields" id="firstname1" name="entry.1303610314" placeholder="Enter Your Name" required>
+                  <input type="text" class="form-control1  inputfields" id="firstname1" name="entry.1324486624" placeholder="Enter Your Name" required>
               </div>
             
 
               <div class="col-md-6">
                   <label for="email" class="form-label"  id="reglabel"><sup>*</sup>Email id:</label>
-                  <input type="text" class="form-control1  inputfields" id="email1" name="entry.1758843105" placeholder="abc@xyz.com" required>
+                  <input type="text" class="form-control1  inputfields" id="email1" name="entry.1330396034" placeholder="abc@xyz.com" required>
               </div>
 
               </div>
@@ -1416,12 +1482,12 @@
 
               <div class="col-md-6">
                   <label for="phone" class="form-label"  id="reglabel"><sup>*</sup>Phone Number</label>
-                  <input type="text" class="form-control1  inputfields" id="phone1" name="entry.1899735185" placeholder="+91" required>
+                  <input type="text" class="form-control1  inputfields" id="phone1" name="entry.77538934" placeholder="+91" required>
               </div>
 
               <div class="col-md-6">
                   <label for="college" class="form-label"  id="reglabel"><sup>*</sup>College</label>
-                  <input type="text" class="form-control1  inputfields" id="college1" name="entry.1349643478" placeholder="College Name" required>
+                  <input type="text" class="form-control1  inputfields" id="college1" name="entry.630086000" placeholder="College Name" required>
               </div>
               
               </div>
@@ -1440,13 +1506,13 @@
 
                       <div class="col-md-6">
                           <label for="firstname" class="form-label"  id="reglabel"><sup>*</sup>Name</label>
-                          <input type="text" class="form-control1  inputfields" id="firstname2" name="entry.385183756" placeholder="Enter Your Name">
+                          <input type="text" class="form-control1  inputfields" id="firstname2" name="entry.915022085" placeholder="Enter Your Name">
                       </div>
                     
         
                       <div class="col-md-6">
                           <label for="email" class="form-label"  id="reglabel"><sup>*</sup>Email id:</label>
-                          <input type="text" class="form-control1  inputfields" id="email2" name="entry.1181759387" placeholder="abc@xyz.com">
+                          <input type="text" class="form-control1  inputfields" id="email2" name="entry.1593807239" placeholder="abc@xyz.com">
                       </div>
         
                       </div>
@@ -1457,12 +1523,12 @@
         
                       <div class="col-md-6">
                           <label for="phone" class="form-label"  id="reglabel"><sup>*</sup>Phone Number</label>
-                          <input type="text" class="form-control1  inputfields" id="phone2" name="entry.1757612186" placeholder="+91">
+                          <input type="text" class="form-control1  inputfields" id="phone2" name="entry.2039440404" placeholder="+91">
                       </div>
         
                       <div class="col-md-6">
                           <label for="college" class="form-label"  id="reglabel"><sup>*</sup>College</label>
-                          <input type="text" class="form-control1  inputfields" id="college2" name="entry.324302188" placeholder="College Name">
+                          <input type="text" class="form-control1  inputfields" id="college2" name="entry.1712801718" placeholder="College Name">
                       </div>
                       
                     </div>
@@ -1488,13 +1554,13 @@
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname" name="entry.1761997611" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname3" name="entry.372156207" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email" name="entry.2000455384" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email3" name="entry.435500274" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1505,12 +1571,12 @@
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone" name="entry.891589539" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone3" name="entry.415626765" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college" name="entry.1562631995" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college3" name="entry.1581386923" placeholder="College Name">
                         </div>
                         
                         </div>
@@ -1529,13 +1595,13 @@
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname" name="entry.1263317225" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname4" name="entry.1129919067" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email" name="entry.2092376359" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email4" name="entry.1488498643" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1546,12 +1612,12 @@
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone" name="entry.379966044" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone4" name="entry.2065724223" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college" name="entry.1050136750" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college4" name="entry.233946190" placeholder="College Name">
                         </div>
                         
                         </div>
@@ -1570,13 +1636,13 @@
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname" name="entry.2042001891" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname5" name="entry.967190264" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email" name="entry.109623924" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email5" name="entry.103853115" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1587,12 +1653,12 @@
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone" name="entry.2058608921" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone5" name="entry.1526357233" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college" name="entry.1071033801" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college5" name="entry.486475059" placeholder="College Name">
                         </div>
                         
                         </div>
@@ -1600,14 +1666,14 @@
                   </div>
                 </div>
               </div>
-              <br><br><br> -->
+              <br><br><br>
 
 
-              <!-- <div class="row">
+              <div class="row">
 
               
                 <div class="col-md-12">
-                    <label for="ques1" class="form-label" id="formheading"><sup>*</sup>How did you hear about us ?</label> -->
+                    <label for="ques1" class="form-label" id="formheading"><sup>*</sup>How did you hear about us ?</label>
                     <!-- <input type="text" class="form-control1 inputfields" id="ques1"  name="entry.1317580365" placeholder="..." required> -->
                  
                   
@@ -1615,7 +1681,7 @@
 
                   
                   
-                    <!-- <select id="ques1" name="entry.1317580365" class="form-select" required>
+                    <select id="ques1" name="entry.1524226097" class="form-select" required>
                     <option value="College">College</option>
                     <option value="LinkedIn">LinkedIn</option>
                     <option value="Friends">Friends</option>
@@ -1624,7 +1690,7 @@
                     <option value="WhatsApp">WhatsApp</option>
                     <option value="Instagram">Instagram</option>
                     <option value="Other">Other</option>
-                    </select>  -->
+                    </select> 
                    
 
                 <!-- </div> -->
@@ -1640,15 +1706,15 @@
 
               <!-- 1317580365 -->
 
-              <!-- <br><br><br><br>
+              <br><br><br><br>
               <div data-toggle="modal" data-target="#_check" style="margin-top: 18px;">
-                <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button> -->
-              <!-- </div> -->
+                <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button>
+              </div>
                   <!-- <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button> -->
               <!-- <div class="col-2">
                   <button class="btn btn-primary" id="wrappernew" onclick="checkForm()">Submit</button>
                 </div>  -->
-                <p id="wrappernew" style="border: none;"></p>                
+                <!-- <p id="wrappernew" style="border: none;"></p>                 -->
 
                 <script src="js/regformsubmit.js">
                   
@@ -1710,7 +1776,106 @@
             <div class="m3">
               <h2 style="color: #1eb8d8; font-size: 40px;"><strong>Executive Team</strong></h2>
       <div class="container_team">
-      
+        <div class="card">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1667340787631.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Bharat Uday</h2>
+                  <h4 style="font-size: 15px ;">Governor</h4>
+                  <div class="social">
+                      <a href="mailto:yoursbharatuday@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p5" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/bharat-uday-a05018196/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <div class="card">
+          <div class="content">
+              <div class="profile">
+                  <img src="images/Head photo/1664528233844.jpeg" alt="">
+              </div>
+              <div class="detail">
+                  <h2 style=" font-size: 25px">Madiha Hanifa</h2>
+                  <h4 style="font-size: 15px ;">Governor</h4>
+                  <div class="social">
+                      <a href="mailto:madihahanifa91@gmail.com"><i class="fa fa-envelope"></i></a>
+                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                      <div data-toggle="modal" data-target="#p3" style="margin-top: 18px;">
+                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+              </div>
+                      <a href="https://www.linkedin.com/in/madiha-hanifa/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <div class="card">
+      <div class="content">
+          <div class="profile">
+              <img src="images/Head photo/1661185252348.jpeg" alt="">
+          </div>
+          <div class="detail">
+              <h2 style=" font-size: 25px">Vaibhav Jalani</h2>
+              <h4 style="font-size: 15px ;">Head Analytics</h4>
+              <div class="social">
+                  <a href="mailto:jalani.vaibhav@gmail.com"><i class="fa fa-envelope"></i></a>
+                  <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                  <div data-toggle="modal" data-target="#p8" style="margin-top: 18px;">
+              <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+              padding-left: 8px;"><i class="fa fa-phone"></i></a>
+            </div>
+                  <a href="https://www.linkedin.com/in/vaibhavjalani/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Head photo/1668207214995.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Ram Sundaram</h2>
+          <h4 style="font-size: 15px ;">Head Finance</h4>
+          <div class="social">
+              <a href="mailto:ram.sundaram101@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <div data-toggle="modal" data-target="#p6" style="margin-top: 18px;">
+        <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+        padding-left: 8px;"><i class="fa fa-phone"></i></a>
+      </div>
+              <a href="https://www.linkedin.com/in/ram-s/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Head photo/1652466320933.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Yuti Patel</h2>
+          <h4 style="font-size: 15px ;">Head Finance</h4>
+          <div class="social">
+              <a href="mailto:yuti13112020@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <div data-toggle="modal" data-target="#p2" style="margin-top: 18px;">
+        <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+        padding-left: 8px;"><i class="fa fa-phone"></i></a>
+      </div>
+              <a href="https://www.linkedin.com/in/yuti-patel-85060b218/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
       <div class="card ">
           <div class="content">
               <div class="profile">
@@ -1726,108 +1891,7 @@
                 <a href="#" style="padding-top: 13px; padding-bottom: 4px;
                 padding-left: 8px;"><i class="fa fa-phone"></i></a>
               </div>
-                      <a href="https://www.linkedin.com/in/pragya-choudhary-104964200/"><i class="fa fa-linkedin-square"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      
-      <div class="card">
-          <div class="content">
-              <div class="profile">
-                  <img src="images/Head photo/1652466320933.jpeg" alt="">
-              </div>
-              <div class="detail">
-                  <h2 style=" font-size: 25px">Yuti Patel</h2>
-                  <h4 style="font-size: 15px ;">Head Finance</h4>
-                  <div class="social">
-                      <a href="mailto:yuti13112020@gmail.com"><i class="fa fa-envelope"></i></a>
-                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                      <div data-toggle="modal" data-target="#p2" style="margin-top: 18px;">
-                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
-                padding-left: 8px;"><i class="fa fa-phone"></i></a>
-              </div>
-                      <a href="https://www.linkedin.com/in/yuti-patel-85060b218/"><i class="fa fa-linkedin-square"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="card">
-          <div class="content">
-              <div class="profile">
-                  <img src="images/Head photo/1664528233844.jpeg" alt="">
-              </div>
-              <div class="detail">
-                  <h2 style=" font-size: 25px">Madiha Hanifa</h2>
-                  <h4 style="font-size: 15px ;">Governor</h4>
-                  <div class="social">
-                      <a href="mailto:madihahanifa91@gmail.com"><i class="fa fa-envelope"></i></a>
-                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                      <div data-toggle="modal" data-target="#p3" style="margin-top: 18px;">
-                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
-                padding-left: 8px;"><i class="fa fa-phone"></i></a>
-              </div>
-                      <a href="https://www.linkedin.com/in/madiha-hanifa/"><i class="fa fa-linkedin-square"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="card">
-          <div class="content">
-              <div class="profile">
-                  <img src="images/Head photo/1666245365699.jpeg" alt="">
-              </div>
-              <div class="detail">
-                  <h2 style=" font-size: 25px">Sai Kalyan Meghavath</h2>
-                  <h4 style="font-size: 15px ;">Web and Design Head</h4>
-                  <div class="social">
-                      <a href="mailto:saikalyan2002@gmail.com"><i class="fa fa-envelope"></i></a>
-                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                      <div data-toggle="modal" data-target="#p4" style="margin-top: 18px;">
-                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
-                padding-left: 8px;"><i class="fa fa-phone"></i></a>
-              </div>
-                      <a href="https://www.linkedin.com/in/sai-kalyan-meghavath-7a26551ba/"><i class="fa fa-linkedin-square"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="card">
-          <div class="content">
-              <div class="profile">
-                  <img src="images/Head photo/1667340787631.jpeg" alt="">
-              </div>
-              <div class="detail">
-                  <h2 style=" font-size: 25px">Bharat Uday</h2>
-                  <h4 style="font-size: 15px ;">Governor</h4>
-                  <div class="social">
-                      <a href="mailto:yoursbharatuday@gmail.com"><i class="fa fa-envelope"></i></a>
-                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                      <div data-toggle="modal" data-target="#p5" style="margin-top: 18px;">
-                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
-                padding-left: 8px;"><i class="fa fa-phone"></i></a>
-              </div>
-                      <a href="https://www.linkedin.com/in/bharat-uday-a05018196/"><i class="fa fa-linkedin-square"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="card">
-          <div class="content">
-              <div class="profile">
-                  <img src="images/Head photo/1668207214995.jpeg" alt="">
-              </div>
-              <div class="detail">
-                  <h2 style=" font-size: 25px">Ram Sundaram</h2>
-                  <h4 style="font-size: 15px ;">Head Finance</h4>
-                  <div class="social">
-                      <a href="mailto:ram.sundaram101@gmail.com"><i class="fa fa-envelope"></i></a>
-                      <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                      <div data-toggle="modal" data-target="#p6" style="margin-top: 18px;">
-                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
-                padding-left: 8px;"><i class="fa fa-phone"></i></a>
-              </div>
-                      <a href="https://www.linkedin.com/in/ram-s/"><i class="fa fa-linkedin-square"></i></a>
+                      <a href="https://www.linkedin.com/in/pragya-choudhary-104964200/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
                   </div>
               </div>
           </div>
@@ -1847,31 +1911,31 @@
                 <a href="#" style="padding-top: 13px; padding-bottom: 4px;
                 padding-left: 8px;"><i class="fa fa-phone"></i></a>
               </div>
-                      <a href="https://www.linkedin.com/in/siddharth-madupathi-07532920a/"><i class="fa fa-linkedin-square"></i></a>
+                      <a href="https://www.linkedin.com/in/siddharth-madupathi-07532920a/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
                   </div>
               </div>
           </div>
       </div>
-      <div class="card">
-        <div class="content">
-            <div class="profile">
-                <img src="images/Head photo/1661185252348.jpeg" alt="">
-            </div>
-            <div class="detail">
-                <h2 style=" font-size: 25px">Vaibhav Jalani</h2>
-                <h4 style="font-size: 15px ;">Head Analytics</h4>
-                <div class="social">
-                    <a href="mailto:jalani.vaibhav@gmail.com"><i class="fa fa-envelope"></i></a>
-                    <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                    <div data-toggle="modal" data-target="#p8" style="margin-top: 18px;">
-                <a href="#" style="padding-top: 13px; padding-bottom: 4px;
-                padding-left: 8px;"><i class="fa fa-phone"></i></a>
+    <div class="card">
+      <div class="content">
+          <div class="profile">
+              <img src="images/Head photo/1666245365699.jpeg" alt="">
+          </div>
+          <div class="detail">
+              <h2 style=" font-size: 25px">Sai Kalyan Meghavath</h2>
+              <h4 style="font-size: 15px ;">Web and Design Head</h4>
+              <div class="social">
+                  <a href="mailto:saikalyan2002@gmail.com"><i class="fa fa-envelope"></i></a>
+                  <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                  <div data-toggle="modal" data-target="#p4" style="margin-top: 18px;">
+            <a href="#" style="padding-top: 13px; padding-bottom: 4px;
+            padding-left: 8px;"><i class="fa fa-phone"></i></a>
+          </div>
+                  <a href="https://www.linkedin.com/in/sai-kalyan-meghavath-7a26551ba/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
               </div>
-                    <a href="https://www.linkedin.com/in/vaibhavjalani/"><i class="fa fa-linkedin-square"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+          </div>
+      </div>
+  </div>
     <!-- <div>
       <div class="indicator" id="arrowdown3">
         <a href="#wrappernew2" onclick="arrowclick()">
@@ -1891,6 +1955,160 @@
         <h2 style="color: #1eb8d8; font-size: 40px;"><strong>Our Advisor</strong></h2>
 <div class="container_team">
 
+  <div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1625350522379.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Abhinav Bohra</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:abhinavbohra01@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <div data-toggle="modal" data-target="#p1"> -->
+                  <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <!-- </div> -->
+                <!-- <a><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/abhinav-bohra/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1651217953179.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Arusarka Bose</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:arusarkabose@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <div data-toggle="modal" data-target="#p1"> -->
+                  <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <!-- </div> -->
+                <!-- <a><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/arusarka-bose/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1655413089352.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Aryan Saxena</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:aryansaxena0308@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <div data-toggle="modal" data-target="#p1"> -->
+                  <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <!-- </div> -->
+                <!-- <a><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/aryan-saxena-516593184/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1649654836734.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Lakshiyata Chhajer</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:lakshita14102000@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <div data-toggle="modal" data-target="#p1"> -->
+                  <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <!-- </div> -->
+                <!-- <a><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/lakshiyata-chhajer-92342219b/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1579719839537.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Sayantan Das</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:emailtosayantan@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <div data-toggle="modal" data-target="#p1"> -->
+                  <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <!-- </div> -->
+                <!-- <a><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/sayantan-das-sd/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1572600742622.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Shivam</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:shivamrnc2000@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <div data-toggle="modal" data-target="#p1"> -->
+                  <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <!-- </div> -->
+                <!-- <a><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/shivam-701496196/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1629548586172.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Aditya Saha</h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:adityaranjha786@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/aditya-saha-67b6941a9/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+  <div class="content">
+      <div class="profile">
+          <img src="images/Advisor photo/1602257235435.jpeg" alt="">
+      </div>
+      <div class="detail">
+          <h2 style=" font-size: 25px">Arnav Bhutda</h2>
+          <h4 style="font-size: 15px ;">Advisor</h4>
+          <div class="social">
+              <a href="mailto:bhutdaarnav@gmail.com"><i class="fa fa-envelope"></i></a>
+              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/arnav-bhutda/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
 <div class="card ">
     <div class="content">
         <div class="profile">
@@ -1903,164 +2121,10 @@
                 <a href="mailto:uttamchandaniarya0@gmail.com"><i class="fa fa-envelope"></i></a>
                 <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
                 <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-                <a href="https://www.linkedin.com/in/arya-uttamchandani-696a371b3/?originalSubdomain=in"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://www.linkedin.com/in/arya-uttamchandani-696a371b3/?originalSubdomain=in" target="_blank"><i class="fa fa-linkedin-square"></i></a>
             </div>
         </div>
     </div>
-</div>
-
-<div class="card">
-    <div class="content">
-        <div class="profile">
-            <img src="images/Advisor photo/1655637528021.jpeg" alt="">
-        </div>
-        <div class="detail">
-            <h2 style=" font-size: 25px">Sankalp Bose            </h2>
-            <h4 style="font-size: 15px ;">Advisor</h4>
-            <div class="social">
-                <a href="mailto:sankalp9987@gmail.com"><i class="fa fa-envelope"></i></a>
-                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-                <a href="https://www.linkedin.com/in/sankalp9987/"><i class="fa fa-linkedin-square"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card">
-    <div class="content">
-        <div class="profile">
-            <img src="images/Advisor photo/1581161169645.jpeg" alt="">
-        </div>
-        <div class="detail">
-            <h2 style=" font-size: 25px"> Karan Uppal</h2>
-            <h4 style="font-size: 15px ;">Advisor</h4>
-            <div class="social">
-                <a href="mailto:karan.uppal3@gmail.com"><i class="fa fa-envelope"></i></a>
-                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-                <a href="https://www.linkedin.com/in/karan-uppal3/"><i class="fa fa-linkedin-square"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card">
-    <div class="content">
-        <div class="profile">
-            <img src="images/Advisor photo/1643478538748.jpeg" alt="">
-        </div>
-        <div class="detail">
-            <h2 style=" font-size: 25px">Dikshant Pratap Singh</h2>
-            <h4 style="font-size: 15px ;">Advisor</h4>
-            <div class="social">
-                <a href="mailto:dikshant293@gmail.com"><i class="fa fa-envelope"></i></a>
-                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-                <a href="https://www.linkedin.com/in/dikshantpratapsingh/"><i class="fa fa-linkedin-square"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card">
-    <div class="content">
-        <div class="profile">
-            <img src="images/Advisor photo/1602257235435.jpeg" alt="">
-        </div>
-        <div class="detail">
-            <h2 style=" font-size: 25px">Arnav Bhutda</h2>
-            <h4 style="font-size: 15px ;">Advisor</h4>
-            <div class="social">
-                <a href="mailto:bhutdaarnav@gmail.com"><i class="fa fa-envelope"></i></a>
-                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-                <a href="https://www.linkedin.com/in/arnav-bhutda/"><i class="fa fa-linkedin-square"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card">
-    <div class="content">
-        <div class="profile">
-            <img src="images/Advisor photo/1666065318821.jpeg" alt="">
-        </div>
-        <div class="detail">
-            <h2 style="font-size: 25px;">Suhas Jain</h2>
-            <h4 style="font-size: 15px;">Advisor</h4>
-            <div class="social">
-                <a href="mailto:suhasjain142@gmail.com"><i class="fa fa-envelope"></i></a>
-                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-                <a href="https://www.linkedin.com/in/suhas-jain/"><i class="fa fa-linkedin-square"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card">
-    <div class="content">
-        <div class="profile">
-            <img src="images/Advisor photo/1629548586172.jpeg" alt="">
-        </div>
-        <div class="detail">
-            <h2 style=" font-size: 25px">Aditya Saha</h2>
-            <h4 style="font-size: 15px ;">Advisor</h4>
-            <div class="social">
-                <a href="mailto:adityaranjha786@gmail.com"><i class="fa fa-envelope"></i></a>
-                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-                <a href="https://www.linkedin.com/in/aditya-saha-67b6941a9/"><i class="fa fa-linkedin-square"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card">
-  <div class="content">
-      <div class="profile">
-          <img src="images/Advisor photo/1604513540745.jpeg" alt="">
-      </div>
-      <div class="detail">
-          <h2 style=" font-size: 25px">Tejaswi Pagadala</h2>
-          <h4 style="font-size: 15px ;">Advisor</h4>
-          <div class="social">
-              <a href="mailto:tejaswi24pagadala@gmail.com"><i class="fa fa-envelope"></i></a>
-              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/tejaswi-24-pagadala/"><i class="fa fa-linkedin-square"></i></a>
-          </div>
-      </div>
-  </div>
-</div>
-<div class="card">
-  <div class="content">
-      <div class="profile">
-          <img src="images/Advisor photo/1668086180247.jpeg" alt="">
-      </div>
-      <div class="detail">
-          <h2 style=" font-size: 25px">Piyush Dhamane</h2>
-          <h4 style="font-size: 15px ;">Advisor</h4>
-          <div class="social">
-              <a href="mailto:piyush.dhamne@gmail.com"><i class="fa fa-envelope"></i></a>
-              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/piyush-dhamane-12286a194/"><i class="fa fa-linkedin-square"></i></a>
-          </div>
-      </div>
-  </div>
-</div>
-<div class="card">
-  <div class="content">
-      <div class="profile">
-          <img src="images/Advisor photo/1606316081578.jpeg" alt="">
-      </div>
-      <div class="detail">
-          <h2 style=" font-size: 25px">Kasis Lundia</h2>
-          <h4 style="font-size: 15px ;">Advisor</h4>
-          <div class="social">
-              <a href="mailto:kasis.lundia1@gmail.com"><i class="fa fa-envelope"></i></a>
-              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/kasis-lundia/"><i class="fa fa-linkedin-square"></i></a>
-          </div>
-      </div>
-  </div>
 </div>
 <div class="card">
   <div class="content">
@@ -2077,7 +2141,7 @@
                 <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
               <!-- </div> -->
               <!-- <a><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/deepansh24/"><i class="fa fa-linkedin-square"></i></a>
+              <a href="https://www.linkedin.com/in/deepansh24/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
           </div>
       </div>
   </div>
@@ -2085,19 +2149,16 @@
 <div class="card">
   <div class="content">
       <div class="profile">
-          <img src="images/Advisor photo/1655413089352.jpeg" alt="">
+          <img src="images/Advisor photo/1643478538748.jpeg" alt="">
       </div>
       <div class="detail">
-          <h2 style=" font-size: 25px">Aryan Saxena</h2>
+          <h2 style=" font-size: 25px">Dikshant Pratap Singh</h2>
           <h4 style="font-size: 15px ;">Advisor</h4>
           <div class="social">
-              <a href="mailto:aryansaxena0308@gmail.com"><i class="fa fa-envelope"></i></a>
+              <a href="mailto:dikshant293@gmail.com"><i class="fa fa-envelope"></i></a>
               <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <div data-toggle="modal" data-target="#p1"> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <!-- </div> -->
-              <!-- <a><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/aryan-saxena-516593184/"><i class="fa fa-linkedin-square"></i></a>
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/dikshantpratapsingh/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
           </div>
       </div>
   </div>
@@ -2105,19 +2166,16 @@
 <div class="card">
   <div class="content">
       <div class="profile">
-          <img src="images/Advisor photo/1572600742622.jpeg" alt="">
+          <img src="images/Advisor photo/1581161169645.jpeg" alt="">
       </div>
       <div class="detail">
-          <h2 style=" font-size: 25px">Shivam</h2>
+          <h2 style=" font-size: 25px"> Karan Uppal</h2>
           <h4 style="font-size: 15px ;">Advisor</h4>
           <div class="social">
-              <a href="mailto:shivamrnc2000@gmail.com"><i class="fa fa-envelope"></i></a>
+              <a href="mailto:karan.uppal3@gmail.com"><i class="fa fa-envelope"></i></a>
               <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <div data-toggle="modal" data-target="#p1"> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <!-- </div> -->
-              <!-- <a><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/shivam-701496196/"><i class="fa fa-linkedin-square"></i></a>
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/karan-uppal3/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
           </div>
       </div>
   </div>
@@ -2125,19 +2183,16 @@
 <div class="card">
   <div class="content">
       <div class="profile">
-          <img src="images/Advisor photo/1579719839537.jpeg" alt="">
+          <img src="images/Advisor photo/1606316081578.jpeg" alt="">
       </div>
       <div class="detail">
-          <h2 style=" font-size: 25px">Sayantan Das</h2>
+          <h2 style=" font-size: 25px">Kasis Lundia</h2>
           <h4 style="font-size: 15px ;">Advisor</h4>
           <div class="social">
-              <a href="mailto:emailtosayantan@gmail.com"><i class="fa fa-envelope"></i></a>
+              <a href="mailto:kasis.lundia1@gmail.com"><i class="fa fa-envelope"></i></a>
               <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <div data-toggle="modal" data-target="#p1"> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <!-- </div> -->
-              <!-- <a><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/sayantan-das-sd/"><i class="fa fa-linkedin-square"></i></a>
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/kasis-lundia/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
           </div>
       </div>
   </div>
@@ -2145,63 +2200,73 @@
 <div class="card">
   <div class="content">
       <div class="profile">
-          <img src="images/Advisor photo/1625350522379.jpeg" alt="">
+          <img src="images/Advisor photo/1668086180247.jpeg" alt="">
       </div>
       <div class="detail">
-          <h2 style=" font-size: 25px">Abhinav Bohra</h2>
+          <h2 style=" font-size: 25px">Piyush Dhamane</h2>
           <h4 style="font-size: 15px ;">Advisor</h4>
           <div class="social">
-              <a href="mailto:abhinavbohra01@gmail.com"><i class="fa fa-envelope"></i></a>
+              <a href="mailto:piyush.dhamne@gmail.com"><i class="fa fa-envelope"></i></a>
               <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <div data-toggle="modal" data-target="#p1"> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <!-- </div> -->
-              <!-- <a><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/abhinav-bohra/"><i class="fa fa-linkedin-square"></i></a>
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/piyush-dhamane-12286a194/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
           </div>
       </div>
   </div>
 </div>
 <div class="card">
-  <div class="content">
-      <div class="profile">
-          <img src="images/Advisor photo/1651217953179.jpeg" alt="">
-      </div>
-      <div class="detail">
-          <h2 style=" font-size: 25px">Arusarka Bose</h2>
-          <h4 style="font-size: 15px ;">Advisor</h4>
-          <div class="social">
-              <a href="mailto:arusarkabose@gmail.com"><i class="fa fa-envelope"></i></a>
-              <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <div data-toggle="modal" data-target="#p1"> -->
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1655637528021.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style=" font-size: 25px">Sankalp Bose            </h2>
+            <h4 style="font-size: 15px ;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:sankalp9987@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
                 <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <!-- </div> -->
-              <!-- <a><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/arusarka-bose/"><i class="fa fa-linkedin-square"></i></a>
-          </div>
-      </div>
-  </div>
+                <a href="https://www.linkedin.com/in/sankalp9987/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="content">
+        <div class="profile">
+            <img src="images/Advisor photo/1666065318821.jpeg" alt="">
+        </div>
+        <div class="detail">
+            <h2 style="font-size: 25px;">Suhas Jain</h2>
+            <h4 style="font-size: 15px;">Advisor</h4>
+            <div class="social">
+                <a href="mailto:suhasjain142@gmail.com"><i class="fa fa-envelope"></i></a>
+                <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+                <a href="https://www.linkedin.com/in/suhas-jain/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="card">
   <div class="content">
       <div class="profile">
-          <img src="images/Advisor photo/1649654836734.jpeg" alt="">
+          <img src="images/Advisor photo/1604513540745.jpeg" alt="">
       </div>
       <div class="detail">
-          <h2 style=" font-size: 25px">Lakshiyata Chhajer</h2>
+          <h2 style=" font-size: 25px">Tejaswi Pagadala</h2>
           <h4 style="font-size: 15px ;">Advisor</h4>
           <div class="social">
-              <a href="mailto:lakshita14102000@gmail.com"><i class="fa fa-envelope"></i></a>
+              <a href="mailto:tejaswi24pagadala@gmail.com"><i class="fa fa-envelope"></i></a>
               <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
-              <!-- <div data-toggle="modal" data-target="#p1"> -->
-                <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
-              <!-- </div> -->
-              <!-- <a><i class="fa fa-phone"></i></a> -->
-              <a href="https://www.linkedin.com/in/lakshiyata-chhajer-92342219b/"><i class="fa fa-linkedin-square"></i></a>
+              <!-- <a href="#"><i class="fa fa-phone"></i></a> -->
+              <a href="https://www.linkedin.com/in/tejaswi-24-pagadala/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
           </div>
       </div>
   </div>
 </div>
+
+
 <!-- <div id="p1" class="w3-modal">
   <div class="w3-modal-content">
     <div class="w3-container">
