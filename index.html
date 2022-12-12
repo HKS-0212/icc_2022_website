@@ -240,12 +240,12 @@
         var field5 = $("#ques1").val();
   
         $.ajax({
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSd231AsqS8YzD8DT20mjFa0pWaX_TZQQy-G_WKL9HfI4yLy1g/formResponse",
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSdWQGRiV_EYLim5vXDbs68tthX9j1BjdOLs9925llApT-zqwQ/formResponse",
             
           //add your google form generated numbers below which are also the 'names' of your inputs     
           data: {
-              "entry.1918365889": field1,
-            "entry.1324486624": field11,
+              "entry.15086253 ": field1,
+            "entry.401518065": field11,
             "entry.1330396034": field21,
             "entry.77538934": field31,
             "entry.630086000": field41,
@@ -270,10 +270,10 @@
           type: "POST",
           dataType: "xml",
           success: function (d) {
-            $('#contact').trigger('reset');
+            $('#regform').trigger('reset');
           },
           error: function (x, y, z) {
-            $('#contact').trigger('reset');
+            $('#regform').trigger('reset');
           }
         });
         return false;
@@ -1448,7 +1448,7 @@
               
               <div class="col-md-12">
                 <label for="teamname" class="form-label" id="reglabelhead"><sup>*</sup>Team Name</label>
-                <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.1918365889" placeholder="Enter Your Team Name" required>
+                <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.15086253" placeholder="Enter Your Team Name" required>
               </div>
 
             
@@ -1465,13 +1465,13 @@
 
               <div class="col-md-6">
                   <label for="firstname" class="form-label"  id="reglabel"><sup>*</sup>Name</label>
-                  <input type="text" class="form-control1  inputfields" id="firstname1" name="entry.1324486624" placeholder="Enter Your Name" required>
+                  <input type="text" class="form-control1  inputfields" id="firstname1" name="entry.401518065" placeholder="Enter Your Name" required>
               </div>
             
 
               <div class="col-md-6">
                   <label for="email" class="form-label"  id="reglabel"><sup>*</sup>Email id:</label>
-                  <input type="text" class="form-control1  inputfields" id="email1" name="entry.1330396034" placeholder="abc@xyz.com" required>
+                  <input type="text" class="form-control1  inputfields" id="email1" name="entry.1330396034 " placeholder="abc@xyz.com" required>
               </div>
 
               </div>
@@ -1482,7 +1482,7 @@
 
               <div class="col-md-6">
                   <label for="phone" class="form-label"  id="reglabel"><sup>*</sup>Phone Number</label>
-                  <input type="text" class="form-control1  inputfields" id="phone1" name="entry.77538934" placeholder="+91" required>
+                  <input type="text" class="form-control1  inputfields" id="phone1" name="entry.77538934 " placeholder="+91" required>
               </div>
 
               <div class="col-md-6">
