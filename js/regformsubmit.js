@@ -117,12 +117,12 @@ function checkForm()
                       // validation was successful
                       
                       else {
-                        document.regform.submit();
-                        document.regform.reset();
+                        document.rform.submit();
+                        // document.regform.reset();
                         var mysubmit = document.getElementById('submit');
                         var displaySetting = submit.style.display;
                         mysubmit.style.display = 'block';
-                        document.getElementById("submit").innerText = "Registration successful, you will receive the problem statement in the next few hours. Do reach out to the contacts in the website if the team leader does not receive an email from us in the next 12 hours";
+                        document.getElementById("submit").innerText = "Registration successful";
                         
                       }
 

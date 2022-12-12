@@ -270,10 +270,10 @@
           type: "POST",
           dataType: "xml",
           success: function (d) {
-            $('#regform1').trigger('reset');
+            $('#regform').trigger('reset');
           },
           error: function (x, y, z) {
-            $('#regform1').trigger('reset');
+            $('#regform').trigger('reset');
           }
         });
         return false;
@@ -1004,14 +1004,8 @@
                 <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                 <h3 class="modal-title"><strong>Alert!!</strong></h3>
             </div>
-            <div class="modal-body" style="height: 200px !important;">
-              <p>
-                
-                <h4 id="submit" class="modaltext" style="text-align: center;">
-
-               please check your mail
-                </h4> 
-              </p>                  
+            <div id="submit" class="modal-body" style="height: 200px !important;">
+               please check your mail                 
             </div>
             <div class="modal-footer" style="border-radius: 0px !important;">
               <div data-dismiss="modal" id="closing"><a href="#"><strong>Close</strong></a></div>
@@ -1441,7 +1435,7 @@
 
             <iframe name="hidden_iframe" style="display: none;"></iframe> 
 
-            <form class="row g-3" id="regform1" name="regform" onsubmit="return postToGoogle();" target="hidden_iframe">
+            <form class="row g-3" id="regform" name="rform" onsubmit="return postToGoogle();" target="hidden_iframe">
 
               <div class="row">
 
@@ -1506,13 +1500,13 @@
 
                       <div class="col-md-6">
                           <label for="firstname" class="form-label"  id="reglabel"><sup>*</sup>Name</label>
-                          <input type="text" class="form-control1  inputfields" id="firstname2" name="entry.915022085" placeholder="Enter Your Name">
+                          <input type="text" class="form-control1  inputfields" id="firstname2" name="entry.915022085" placeholder="Enter Your Name" required>
                       </div>
                     
         
                       <div class="col-md-6">
                           <label for="email" class="form-label"  id="reglabel"><sup>*</sup>Email id:</label>
-                          <input type="text" class="form-control1  inputfields" id="email2" name="entry.1593807239" placeholder="abc@xyz.com">
+                          <input type="text" class="form-control1  inputfields" id="email2" name="entry.1593807239" placeholder="abc@xyz.com" required>
                       </div>
         
                       </div>
@@ -1523,12 +1517,12 @@
         
                       <div class="col-md-6">
                           <label for="phone" class="form-label"  id="reglabel"><sup>*</sup>Phone Number</label>
-                          <input type="text" class="form-control1  inputfields" id="phone2" name="entry.2039440404" placeholder="+91">
+                          <input type="text" class="form-control1  inputfields" id="phone2" name="entry.2039440404" placeholder="+91" required>
                       </div>
         
                       <div class="col-md-6">
                           <label for="college" class="form-label"  id="reglabel"><sup>*</sup>College</label>
-                          <input type="text" class="form-control1  inputfields" id="college2" name="entry.1712801718" placeholder="College Name">
+                          <input type="text" class="form-control1  inputfields" id="college2" name="entry.1712801718" placeholder="College Name" required>
                       </div>
                       
                     </div>
@@ -1718,15 +1712,15 @@
 
                 <script src="js/regformsubmit.js">
                   
-                    function submitForm() {
-                    document.regform.submit();
-                    document.regform.reset();
+                    // function submitForm() {
+                    // document.regform.submit();
+                    // document.regform.reset();
 
-                    var mysubmit = document.getElementById('submit');
-                    var displaySetting = submit.style.display;
-                    mysubmit.style.display = 'block';
+                    // var mysubmit = document.getElementById('submit');
+                    // // var displaySetting = submit.style.display;
+                    // // mysubmit.style.display = 'block';
 
-                    }
+                    // }
 
                   
 
