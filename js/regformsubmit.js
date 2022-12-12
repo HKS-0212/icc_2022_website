@@ -122,7 +122,7 @@ function checkForm()
                         var mysubmit = document.getElementById('submit');
                         var displaySetting = submit.style.display;
                         mysubmit.style.display = 'block';
-                        document.getElementById("submit").innerText = "Registration successful";
+                        document.getElementById("submit").innerText = "Registration successful. A Confirmation Mail has been sent to the Team Leader. Please contact us if you haven't recived the Mail";
                         
                       }
 
