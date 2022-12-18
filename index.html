@@ -221,51 +221,61 @@
         var field21 = $("#email1").val();
         var field31 = $("#phone1").val();
         var field41 = $("#college1").val();
+        var field51 = $("#KTJ1").val();
         var field12 = $("#firstname2").val();
         var field22 = $("#email2").val();
         var field32 = $("#phone2").val();
         var field42 = $("#college2").val();
+        var field52 = $("#KTJ2").val();
         var field13 = $("#firstname3").val();
         var field23 = $("#email3").val();
         var field33 = $("#phone3").val();
         var field43 = $("#college3").val();
+        var field53 = $("#KTJ3").val();
         var field14 = $("#firstname4").val();
         var field24 = $("#email4").val();
         var field34 = $("#phone4").val();
         var field44 = $("#college4").val();
+        var field54 = $("#KTJ4").val();
         var field15 = $("#firstname5").val();
         var field25 = $("#email5").val();
         var field35 = $("#phone5").val();
         var field45 = $("#college5").val();
+        var field55 = $("#KTJ5").val();
         var field5 = $("#ques1").val();
   
         $.ajax({
-          url: "https://docs.google.com/forms/d/e/1FAIpQLSdWQGRiV_EYLim5vXDbs68tthX9j1BjdOLs9925llApT-zqwQ/formResponse",
+          url: "https://docs.google.com/forms/d/e/1FAIpQLSeHFzNbIapfpMI2E3DDc0cQdvlvy7b3cr21ck8tSXgMT-HURA/formResponse",
             
           //add your google form generated numbers below which are also the 'names' of your inputs     
           data: {
-              "entry.15086253": field1,
-            "entry.401518065": field11,
-            "entry.1330396034": field21,
-            "entry.77538934": field31,
-            "entry.630086000": field41,
-            "entry.915022085": field12,
-            "entry.1593807239": field22,
-            "entry.2039440404": field32,
-            "entry.1712801718": field42,
-            "entry.372156207": field13,
-            "entry.435500274": field23,
-            "entry.415626765": field33,
-            "entry.1581386923": field43,
-            "entry.1129919067": field14,
-            "entry.1488498643": field24,
-            "entry.2065724223": field34,
-            "entry.233946190": field44,
-            "entry.967190264": field15,
-            "entry.103853115": field25,
-            "entry.1526357233": field35,
-            "entry.486475059": field45,
-            "entry.1524226097": field5,
+              "entry.1782577217": field1,
+            "entry.2130025010": field11,
+            "entry.1790963972": field21,
+            "entry.237538463": field31,
+            "entry.1424570216": field41,
+            "entry.146273771": field51,
+            "entry.968329203": field12,
+            "entry.2008869754": field22,
+            "entry.237735070": field32,
+            "entry.417545222": field42,
+            "entry.403395898": field52,
+            "entry.644400398": field13,
+            "entry.1460196068": field23,
+            "entry.781112184": field33,
+            "entry.1704582960": field43,
+            "entry.571196062": field53,
+            "entry.1660144525": field14,
+            "entry.225061196": field24,
+            "entry.735057038": field34,
+            "entry.1979480920": field44,
+            "entry.971276001": field45,
+            "entry.950402432": field15,
+            "entry.1016277411": field25,
+            "entry.1283623901": field35,
+            "entry.483976725": field45,
+            "entry.1931006355": field55,
+            "entry.194555279": field5,
           },
           type: "POST",
           dataType: "xml",
@@ -310,7 +320,7 @@ function displayContent() {
 
 document.addEventListener("DOMContentLoaded", function() {
     loader = document.getElementById('loader');
-    loadNow(4);
+    loadNow(3);
 });
     </script>
 </head>
@@ -1225,9 +1235,9 @@ document.addEventListener("DOMContentLoaded", function() {
           <a data-toggle="tab" id="aMenu2" href="#menu2" title="Register" onclick="hiden()" onmouseover="lowerz()" onmouseout="higherz()">
             <i class="fa fa-plus-square" aria-hidden="true"></i>
             <span class="slidetext">Register</span></a></li>
-        <!-- <li id="men2">
-          <a data-toggle="tab" id="aMenu2" href="#menu2" title="Register" onclick="hiden()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-plus-square"
-                aria-hidden="true"></i><span class="slidetext">Register</span></a></li> -->
+        <!-- <li id="men4">
+          <a data-toggle="tab" id="aMenu4" href="#menu4" title="Register" onclick="hiden()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-file-text-o"
+                aria-hidden="true"></i><span class="slidetext">Submissions</span></a></li> -->
                 <!-- <li><a id="contact_btn"href="#" data-toggle="modal" data-target="#ctmodal" title="Contact"  onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-envelope" aria-hidden="true"></i><span class="slidetext" >Contact</span></a></li> -->
               <li id="men3">
                 <a data-toggle="tab" id="aMenu3" href="#menu3" title="team" onclick="unhide()" onmouseover="lowerz()" onmouseout="higherz()"><i class="fa fa-users" aria-hidden="true"></i><span class="slidetext" >Our Team</span></a></li>
@@ -1477,7 +1487,7 @@ document.addEventListener("DOMContentLoaded", function() {
               
               <div class="col-md-12">
                 <label for="teamname" class="form-label" id="reglabelhead"><sup>*</sup>Team Name</label>
-                <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.15086253" placeholder="Enter Your Team Name" required>
+                <input type="text" class="form-control1 inputfields" id="teamname"  name="entry.1782577217" placeholder="Enter Your Team Name" required>
               </div>
 
             
@@ -1494,13 +1504,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
               <div class="col-md-6">
                   <label for="firstname" class="form-label"  id="reglabel"><sup>*</sup>Name</label>
-                  <input type="text" class="form-control1  inputfields" id="firstname1" name="entry.401518065" placeholder="Enter Your Name" required>
+                  <input type="text" class="form-control1  inputfields" id="firstname1" name="entry.2130025010" placeholder="Enter Your Name" required>
               </div>
             
 
               <div class="col-md-6">
                   <label for="email" class="form-label"  id="reglabel"><sup>*</sup>Email id:</label>
-                  <input type="text" class="form-control1  inputfields" id="email1" name="entry.1330396034 " placeholder="abc@xyz.com" required>
+                  <input type="text" class="form-control1  inputfields" id="email1" name="entry.1790963972 " placeholder="abc@xyz.com" required>
               </div>
 
               </div>
@@ -1511,12 +1521,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
               <div class="col-md-6">
                   <label for="phone" class="form-label"  id="reglabel"><sup>*</sup>Phone Number</label>
-                  <input type="text" class="form-control1  inputfields" id="phone1" name="entry.77538934 " placeholder="+91" required>
+                  <input type="text" class="form-control1  inputfields" id="phone1" name="entry.237538463 " placeholder="+91" required>
               </div>
 
               <div class="col-md-6">
                   <label for="college" class="form-label"  id="reglabel"><sup>*</sup>College</label>
-                  <input type="text" class="form-control1  inputfields" id="college1" name="entry.630086000" placeholder="College Name" required>
+                  <input type="text" class="form-control1  inputfields" id="college1" name="entry.1424570216" placeholder="College Name" required>
+              </div>
+              <div class="row">
+
+                <br>
+
+              <div class="col-md-6" style="margin: 15px;">
+                  <label for="Ktj id" class="form-label"  id="reglabel">KTJ ID(If you have been redirected here from Kshitij Techno-Fest website)</label>
+                  <input type="text" class="form-control1  inputfields" id="KTJ1" name="entry.146273771 " placeholder="Enter your KTJ ID">
+              </div>
               </div>
               
               </div>
@@ -1535,13 +1554,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
                       <div class="col-md-6">
                           <label for="firstname" class="form-label"  id="reglabel"><sup>*</sup>Name</label>
-                          <input type="text" class="form-control1  inputfields" id="firstname2" name="entry.915022085" placeholder="Enter Your Name" required>
+                          <input type="text" class="form-control1  inputfields" id="firstname2" name="entry.968329203" placeholder="Enter Your Name" required>
                       </div>
                     
         
                       <div class="col-md-6">
                           <label for="email" class="form-label"  id="reglabel"><sup>*</sup>Email id:</label>
-                          <input type="text" class="form-control1  inputfields" id="email2" name="entry.1593807239" placeholder="abc@xyz.com" required>
+                          <input type="text" class="form-control1  inputfields" id="email2" name="entry.2008869754" placeholder="abc@xyz.com" required>
                       </div>
         
                       </div>
@@ -1552,14 +1571,23 @@ document.addEventListener("DOMContentLoaded", function() {
         
                       <div class="col-md-6">
                           <label for="phone" class="form-label"  id="reglabel"><sup>*</sup>Phone Number</label>
-                          <input type="text" class="form-control1  inputfields" id="phone2" name="entry.2039440404" placeholder="+91" required>
+                          <input type="text" class="form-control1  inputfields" id="phone2" name="entry.237735070" placeholder="+91" required>
                       </div>
         
                       <div class="col-md-6">
                           <label for="college" class="form-label"  id="reglabel"><sup>*</sup>College</label>
-                          <input type="text" class="form-control1  inputfields" id="college2" name="entry.1712801718" placeholder="College Name" required>
+                          <input type="text" class="form-control1  inputfields" id="college2" name="entry.417545222" placeholder="College Name" required>
                       </div>
                       
+                    </div>
+                    <div class="row">
+
+                      <br>
+      
+                    <div class="col-md-6">
+                        <label for="Ktj id" class="form-label"  id="reglabel">KTJ ID(If you have been redirected here from Kshitij Techno-Fest website)</label>
+                        <input type="text" class="form-control1  inputfields" id="KTJ2" name="entry.403395898 " placeholder="Enter your KTJ ID">
+                    </div>
                     </div>
                   
               
@@ -1583,13 +1611,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname3" name="entry.372156207" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname3" name="entry.644400398" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email3" name="entry.435500274" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email3" name="entry.1460196068" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1600,14 +1628,23 @@ document.addEventListener("DOMContentLoaded", function() {
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone3" name="entry.415626765" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone3" name="entry.781112184" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college3" name="entry.1581386923" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college3" name="entry.1704582960" placeholder="College Name">
                         </div>
                         
+                        </div>
+                        <div class="row">
+
+                          <br>
+          
+                        <div class="col-md-6" >
+                            <label for="Ktj id" class="form-label"  id="reglabel">KTJ ID(If you have been redirected here from Kshitij Techno-Fest website)</label>
+                            <input type="text" class="form-control1  inputfields" id="KTJ3" name="entry.571196062 " placeholder="Enter your KTJ ID">
+                        </div>
                         </div>
                     </div>
                   </div>
@@ -1624,13 +1661,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname4" name="entry.1129919067" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname4" name="entry.1660144525" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email4" name="entry.1488498643" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email4" name="entry.225061196" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1641,14 +1678,23 @@ document.addEventListener("DOMContentLoaded", function() {
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone4" name="entry.2065724223" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone4" name="entry.735057038" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college4" name="entry.233946190" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college4" name="entry.1979480920" placeholder="College Name">
                         </div>
                         
+                        </div>
+                        <div class="row">
+
+                          <br>
+          
+                        <div class="col-md-6" >
+                            <label for="Ktj id" class="form-label"  id="reglabel">KTJ ID(If you have been redirected here from Kshitij Techno-Fest website)</label>
+                            <input type="text" class="form-control1  inputfields" id="KTJ4" name="entry.971276001 " placeholder="Enter your KTJ ID">
+                        </div>
                         </div>
                     </div>
                   </div>
@@ -1665,13 +1711,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         <div class="col-md-6">
                             <label for="firstname" class="form-label"  id="reglabel">Name</label>
-                            <input type="text" class="form-control1" id="firstname5" name="entry.967190264" placeholder="Enter Your Name">
+                            <input type="text" class="form-control1" id="firstname5" name="entry.950402432" placeholder="Enter Your Name">
                         </div>
                       
           
                         <div class="col-md-6">
                             <label for="email" class="form-label"  id="reglabel">Email id:</label>
-                            <input type="text" class="form-control1" id="email5" name="entry.103853115" placeholder="abc@xyz.com">
+                            <input type="text" class="form-control1" id="email5" name="entry.1016277411" placeholder="abc@xyz.com">
                         </div>
           
                         </div>
@@ -1682,14 +1728,23 @@ document.addEventListener("DOMContentLoaded", function() {
           
                         <div class="col-md-6">
                             <label for="phone" class="form-label"  id="reglabel">Phone Number</label>
-                            <input type="text" class="form-control1" id="phone5" name="entry.1526357233" placeholder="+91">
+                            <input type="text" class="form-control1" id="phone5" name="entry.1283623901" placeholder="+91">
                         </div>
           
                         <div class="col-md-6">
                             <label for="college" class="form-label"  id="reglabel">College</label>
-                            <input type="text" class="form-control1" id="college5" name="entry.486475059" placeholder="College Name">
+                            <input type="text" class="form-control1" id="college5" name="entry.483976725" placeholder="College Name">
                         </div>
                         
+                        </div>
+                        <div class="row">
+
+                          <br>
+          
+                        <div class="col-md-6">
+                            <label for="Ktj id" class="form-label"  id="reglabel">KTJ ID(If you have been redirected here from Kshitij Techno-Fest website)</label>
+                            <input type="text" class="form-control1  inputfields" id="KTJ5" name="entry.1931006355 " placeholder="Enter your KTJ ID">
+                        </div>
                         </div>
                     </div>
                   </div>
@@ -1710,7 +1765,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                   
                   
-                    <select id="ques1" name="entry.1524226097" class="form-select" required>
+                    <select id="ques1" name="entry.194555279" class="form-select" required>
                     <option value="College">College</option>
                     <option value="LinkedIn">LinkedIn</option>
                     <option value="Friends">Friends</option>
@@ -1794,7 +1849,6 @@ document.addEventListener("DOMContentLoaded", function() {
             
           </article>
         </section>
-        
         <!-- Newsletter Subscribtion --> 
         
         <!-- Contact -->
@@ -1981,7 +2035,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <div class="m3" style="width: 80%;">
 
-        <h2 style="color: #1eb8d8; font-size: 40px;"><strong>Our Advisor</strong></h2>
+        <h2 style="color: #1eb8d8; font-size: 40px;"><strong>Our Advisors</strong></h2>
 <div class="container_team">
 
   <div class="card">
